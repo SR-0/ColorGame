@@ -70,10 +70,10 @@ bool InputManager::isHoveringOver(RectangleShape* rect)
 {
 	auto mouse = sf::Mouse::getPosition(*renderWindow);
 
-	if (mouse.x > (rect->getPosition().x - rect->getOrigin().x)						&&
-		mouse.y > (rect->getPosition().y - rect->getOrigin().y)						&&
-		mouse.x < (rect->getPosition().x + rect->getSize().x) - rect->getOrigin().x	&&
-		mouse.y < (rect->getPosition().y + rect->getSize().y) - rect->getOrigin().y	)
+	if (mouse.x > ( (rect->getPosition().x) - (rect->getOrigin().x * rect->getScale().x) )												&&
+		mouse.y > ( (rect->getPosition().y) - (rect->getOrigin().y * rect->getScale().y) )												&&
+		mouse.x < ( (rect->getPosition().x) + (rect->getSize().x * rect->getScale().x) - (rect->getOrigin().x * rect->getScale().x) )	&&
+		mouse.y < ( (rect->getPosition().y) + (rect->getSize().y * rect->getScale().y) - (rect->getOrigin().y * rect->getScale().y) )	)
 	{
 		return true;
 	}

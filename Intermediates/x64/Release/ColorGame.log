@@ -30,12 +30,12 @@ D:\Development\Projects\ColorGame\Source\Core\Connection.cpp(22,54): warning C42
 D:\Development\Projects\ColorGame\Source\Asset\Shape.h(59,5): warning C4244: 'argument': conversion from 'float' to 'sf::Uint8', possible loss of data
 D:\Development\Projects\ColorGame\Source\Asset\Text.h(53,5): warning C4244: 'argument': conversion from 'float' to 'sf::Uint8', possible loss of data
 D:\Development\Projects\ColorGame\Source\Utility\RandomNumberGenerator.h(12,13): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-D:\Development\Projects\ColorGame\Source\State\StateTest1.cpp(12,85): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+D:\Development\Projects\ColorGame\Source\State\StateTest1.cpp(12,84): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
           with
           [
               T=unsigned int
           ]
-D:\Development\Projects\ColorGame\Source\State\StateTest1.cpp(12,50): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+D:\Development\Projects\ColorGame\Source\State\StateTest1.cpp(12,49): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
           with
           [
               T=unsigned int
@@ -44,12 +44,12 @@ D:\Development\Projects\ColorGame\Source\State\StateTest1.cpp(12,50): warning C4
 D:\Development\Projects\ColorGame\Source\Asset\Shape.h(59,5): warning C4244: 'argument': conversion from 'float' to 'sf::Uint8', possible loss of data
 D:\Development\Projects\ColorGame\Source\Asset\Text.h(53,5): warning C4244: 'argument': conversion from 'float' to 'sf::Uint8', possible loss of data
 D:\Development\Projects\ColorGame\Source\Utility\RandomNumberGenerator.h(12,13): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-D:\Development\Projects\ColorGame\Source\State\StateTest2.cpp(27,85): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+D:\Development\Projects\ColorGame\Source\State\StateTest2.cpp(27,84): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
           with
           [
               T=unsigned int
           ]
-D:\Development\Projects\ColorGame\Source\State\StateTest2.cpp(27,50): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+D:\Development\Projects\ColorGame\Source\State\StateTest2.cpp(27,49): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
           with
           [
               T=unsigned int
@@ -58,20 +58,33 @@ D:\Development\Projects\ColorGame\Source\State\StateTest2.cpp(27,50): warning C4
 D:\Development\Projects\ColorGame\Source\Asset\Shape.h(59,5): warning C4244: 'argument': conversion from 'float' to 'sf::Uint8', possible loss of data
 D:\Development\Projects\ColorGame\Source\Asset\Text.h(53,5): warning C4244: 'argument': conversion from 'float' to 'sf::Uint8', possible loss of data
 D:\Development\Projects\ColorGame\Source\Utility\RandomNumberGenerator.h(12,13): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-D:\Development\Projects\ColorGame\Source\State\StateTest3.cpp(32,85): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+D:\Development\Projects\ColorGame\Source\State\StateTest3.cpp(32,84): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
           with
           [
               T=unsigned int
           ]
-D:\Development\Projects\ColorGame\Source\State\StateTest3.cpp(32,50): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+D:\Development\Projects\ColorGame\Source\State\StateTest3.cpp(32,49): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+  StateTest4.cpp
+D:\Development\Projects\ColorGame\Source\Asset\Shape.h(59,5): warning C4244: 'argument': conversion from 'float' to 'sf::Uint8', possible loss of data
+D:\Development\Projects\ColorGame\Source\Asset\Text.h(53,5): warning C4244: 'argument': conversion from 'float' to 'sf::Uint8', possible loss of data
+D:\Development\Projects\ColorGame\Source\Utility\RandomNumberGenerator.h(12,13): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+D:\Development\Projects\ColorGame\Source\State\StateTest4.cpp(50,84): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+D:\Development\Projects\ColorGame\Source\State\StateTest4.cpp(50,49): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
           with
           [
               T=unsigned int
           ]
   Generating code
-  Previous IPDB not found, fall back to full compilation.
-D:\Development\Projects\ColorGame\Source\Core\State.cpp(23): warning C4715: 'State::getRenderWindow': not all control paths return a value
-D:\Development\Projects\ColorGame\Source\Asset\RectangleShape.h(68): warning C4715: 'RectangleShape::getPoint': not all control paths return a value
-  All 748 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  66 of 800 functions ( 8.2%) were compiled, the rest were copied from previous compilation.
+    15 functions were new in current compilation
+    31 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   ColorGame.vcxproj -> D:\Development\Projects\ColorGame\Binaries\x64\Release\ColorGame.exe
