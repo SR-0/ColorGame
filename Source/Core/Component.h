@@ -11,6 +11,7 @@
 #include <type_traits>
 
 #include <SFML/Graphics/Drawable.hpp>
+#include <SFML/Graphics/Rect.hpp>
 #include <SFML/Graphics/Shape.hpp>
 #include <SFML/Graphics/Color.hpp>
 #include <SFML/Network/TcpSocket.hpp>

@@ -6,7 +6,7 @@ void StateTest2::create()
 	soundBuffer	= createSoundBuffer("SoundBufferOK");
 	sound		= createSound("SoundOK");
 	track		= createMusic("MusicInnerLight");
-	rect		= createRectangleShape("RectangleShapeBox");
+	box			= createRectangleShape("box");
 }
 
 void StateTest2::setup()
@@ -22,25 +22,25 @@ void StateTest2::setup()
 	track->play();
 
 	// shapes
-	rect->setSize(100, 100);
-	rect->setOrigin(rect->getSize().x / 2, rect->getSize().y / 2);
-	rect->setPosition(getRenderWindow().getSize().x / 2, getRenderWindow().getSize().y / 2);
-	rect->setFillColor(sf::Color(0, 0, 255, 0));
+	box->setSize(100, 100);
+	box->setOrigin(box->getSize().x / 2, box->getSize().y / 2);
+	box->setPosition(getRenderWindow().getSize().x / 2, getRenderWindow().getSize().y / 2);
+	box->setFillColor(sf::Color(0, 0, 255, 0));
 }
 
 void StateTest2::update()
 {
 	auto deltaTime = dm::getDeltaTime().asMilliseconds();
 
-	// if rect is not opaque, keep fading rect in
-	if (!rect->isOpaque())
+	// if box is not opaque, keep fading box in
+	if (!box->isOpaque())
 	{
-		rect->fadeIn(0.2f * deltaTime);
+		box->fadeIn(0.2f * deltaTime);
 	}
 	else
 	{
-		// change color and play sound if clicking on rect
-		if (im::isLeftClickingOn(rect))
+		// change color and play sound if clicking on box
+		if (im::isLeftClickingOn(box))
 		{
 			if (!sound->isActive())
 			{
@@ -48,12 +48,12 @@ void StateTest2::update()
 				sound->setActive(true);
 			}
 
-			rect->setFillColor(sf::Color::Green);
+			box->setFillColor(sf::Color::Green);
 		}
 		// change to original color
 		else
 		{
-			rect->setFillColor(sf::Color::Blue);
+			box->setFillColor(sf::Color::Blue);
 			sound->setActive(false);
 		}
 	}
@@ -62,6 +62,7 @@ void StateTest2::update()
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::BackSpace))
 	{
 		sound->play();
+		sound->setActive(true);
 		setStage(STATE_STAGE::RESOLVE);
 	}
 }

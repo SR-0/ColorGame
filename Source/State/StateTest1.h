@@ -6,13 +6,12 @@
 /*
 	this state is short and simple:
 
-		1.) rect fades in
+		1.) box fades in
 
-		2.) if you left-click on rect, it will turn green
+		2.) if you left-click on box, it will turn green
 
-		3.) if you hit backspace, it resolves and then ends
-		the state (stateless RenderWindow a.k.a. blank
-		RenderWindow)
+		3.) if you hit backspace, it resolves and then endsthe state 
+		(stateless RenderWindow a.k.a. blankRenderWindow)
 
 	- end of state
 */
@@ -33,7 +32,7 @@ public:
 
 public:
 
-	RectangleShape* rect;
+	RectangleShape* box;
 
 };
 

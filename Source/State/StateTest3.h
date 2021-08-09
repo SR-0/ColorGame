@@ -12,6 +12,8 @@
 
 		3.) add controls to move rect around
 
+		4.) various little things
+
 	- end of state
 */
 
@@ -35,7 +37,7 @@ public:
 	Sound*			sound;
 	Music*			track;
 	Font*			font;
-	RectangleShape* rect;
+	RectangleShape* box;
 	Text*			text;
 
 };

@@ -2,27 +2,27 @@
 
 void StateTest1::create()
 {
-	rect = createRectangleShape(); // <- automatically adds to managable shape container
+	box = createRectangleShape(); // <- automatically adds to managable shape container
 }
 
 void StateTest1::setup()
 {
-	rect->setSize(100, 100);
-	rect->setOrigin(rect->getSize().x / 2, rect->getSize().y / 2);
-	rect->setPosition(getRenderWindow().getSize().x / 2, getRenderWindow().getSize().y / 2);
-	rect->setFillColor(sf::Color(0, 0, 255, 0));
+	box->setSize(100, 100);
+	box->setOrigin(box->getSize().x / 2, box->getSize().y / 2);
+	box->setPosition(getRenderWindow().getSize().x / 2, getRenderWindow().getSize().y / 2);
+	box->setFillColor(sf::Color(0, 0, 255, 0));
 }
 
 void StateTest1::update()
 {
-	if (!rect->isOpaque())
+	if (!box->isOpaque())
 	{
-		rect->fadeIn(0.2f * dm::getDeltaTime().asMilliseconds());
+		box->fadeIn(0.2f * dm::getDeltaTime().asMilliseconds());
 	}
 
-	if (im::isLeftClickingOn(rect))
+	if (im::isLeftClickingOn(box))
 	{
-		rect->setFillColor(sf::Color::Green);
+		box->setFillColor(sf::Color::Green);
 	}
 	
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::BackSpace))

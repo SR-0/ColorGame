@@ -12,6 +12,8 @@
 
 		3.) adds music track for background music
 
+		4.) rect color will change back to original color after click
+
 	- end of state
 */
 
@@ -34,7 +36,7 @@ public:
 	SoundBuffer*	soundBuffer;
 	Sound*			sound;
 	Music*			track;
-	RectangleShape* rect;
+	RectangleShape* box;
 
 };
 

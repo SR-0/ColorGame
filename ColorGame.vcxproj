@@ -173,6 +173,7 @@
     <ClCompile Include="Source\State\StateTest1.cpp" />
     <ClCompile Include="Source\State\StateTest2.cpp" />
     <ClCompile Include="Source\State\StateTest3.cpp" />
+    <ClCompile Include="Source\State\StateTest4.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\Utility\RandomNumberGenerator.h" />
@@ -203,6 +204,7 @@
     <ClInclude Include="Source\State\StateTest1.h" />
     <ClInclude Include="Source\State\StateTest2.h" />
     <ClInclude Include="Source\State\StateTest3.h" />
+    <ClInclude Include="Source\State\StateTest4.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -7,8 +7,8 @@ void StateTest3::create()
 	sound		= createSound("SoundOK");
 	track		= createMusic("MusicInnerLight");
 	font		= createFont("FontDefault");
-	rect		= createRectangleShape("RectangleShapeBox");
-	text		= createText("TextClickTheBox");
+	box			= createRectangleShape("RectangleShapeBox");
+	text		= createText("TextMessage");
 }
 
 void StateTest3::setup()
@@ -26,16 +26,14 @@ void StateTest3::setup()
 	// fonts
 	font->loadFromFile("Resources/Fonts/chess_type.ttf");
 
-	// shapes
-	rect->setSize(100, 100);
-	rect->setOrigin(rect->getSize().x / 2, rect->getSize().y / 2);
-	rect->setPosition(getRenderWindow().getSize().x / 2, getRenderWindow().getSize().y / 2);
-	rect->setFillColor(sf::Color(0, 0, 255, 0));
-	
+	// shapes (rect) - NOTE: fill color is automatically white so I took the "setFillColor" away. **White is the color needed for textures**
+	box->setSize(100, 100);
+	box->setOrigin(box->getSize().x / 2, box->getSize().y / 2);
+	box->setPosition(getRenderWindow().getSize().x / 2, getRenderWindow().getSize().y / 2);
+
 	// texts
 	text->setFont(*font);
-	//text->setOrigin(sf::Vector2f(text->getCharacterSize() / 2, text->getCharacterSize() / 2));
-	text->setPosition(640, 400);
+	text->setPosition(300, 250);
 	text->setString("left click or move (W, A, S, D) the box");
 }
 
@@ -43,15 +41,15 @@ void StateTest3::update()
 {
 	auto deltaTime = dm::getDeltaTime().asMilliseconds();
 
-	// if rect is not opaque, keep fading rect in
-	if (!rect->isOpaque())
+	// if box is not opaque, keep fading box in
+	if (!box->isOpaque())
 	{
-		rect->fadeIn(0.2f * deltaTime);
+		box->fadeIn(0.2f * deltaTime);
 	}
 	else
 	{
-		// change color and play sound if clicking on rect
-		if (im::isLeftClickingOn(rect))
+		// change color and play sound if clicking on box
+		if (im::isLeftClickingOn(box))
 		{
 			if (!sound->isActive())
 			{
@@ -59,12 +57,12 @@ void StateTest3::update()
 				sound->setActive(true);
 			}
 
-			rect->setFillColor(sf::Color::Green);
+			box->setFillColor(sf::Color::Green);
 		}
 		// change to original color
 		else
 		{
-			rect->setFillColor(sf::Color::Blue);
+			box->setFillColor(sf::Color::Blue);
 			sound->setActive(false);
 		}
 	}
@@ -72,25 +70,26 @@ void StateTest3::update()
 	// crude movement example
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::W))
 	{
-		rect->move(sf::Vector2f(0, -0.3f * deltaTime));
+		box->move(sf::Vector2f(0, -0.3f * deltaTime));
 	}
 	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::A))
 	{
-		rect->move(sf::Vector2f(-0.3f * deltaTime, 0));
+		box->move(sf::Vector2f(-0.3f * deltaTime, 0));
 	}
 	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::S))
 	{
-		rect->move(sf::Vector2f(0, 0.3f * deltaTime));
+		box->move(sf::Vector2f(0, 0.3f * deltaTime));
 	}
 	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::D))
 	{
-		rect->move(sf::Vector2f(0.3f * deltaTime, 0.));
+		box->move(sf::Vector2f(0.3f * deltaTime, 0.));
 	}
 
 	// end state
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::BackSpace))
 	{
 		sound->play();
+		sound->setActive(true);
 		setStage(STATE_STAGE::RESOLVE);
 	}
 }
